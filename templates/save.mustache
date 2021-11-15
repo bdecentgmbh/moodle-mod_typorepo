@@ -19,11 +19,24 @@
 
     Example context (json):
     {
-        "reactionurl_dislike" : "http://moodleurl/mod/typorepo/lib.php"
+        "reactionurl_dislike" : "http://moodleurl/mod/typorepo/save.php"
     }
 }}
-{{#instance}}
-    <div class="typorepo-container justify-content-center">
-        {{{iframe}}}
+
+<div class='typorepo-load-block'>
+    <script>
+        var mform1 = parent.document.getElementById('typorepo-load-iframe').closest('.mform');
+        var url = {{#quote}}{{url}}{{/quote}};
+        if (typeof mform1.url != 'undefined') {
+            mform1.url.value = url;
+        }
+        if (typeof mform1.config_url != 'undefined') {
+            mform1.config_url.value = url;
+        }
+    </script>
+    <div class="save-box">
+         <p>{{linksaved}}</p>
     </div>
-{{/instance}}
+</div>
+
+
