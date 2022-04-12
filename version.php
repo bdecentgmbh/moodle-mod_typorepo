@@ -18,14 +18,14 @@
  * Version information
  *
  * @package   mod_typorepo
- * @copyright 2020 bdecent gmbh <https://bdecent.de>
+ * @copyright 2022 bdecent gmbh <https://bdecent.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_typorepo';
-$plugin->version = 2021111600;
-$plugin->release = '1.1';
+$plugin->version = 2022041200;
+$plugin->release = '1.11';
 $plugin->requires = 2020061501;
 $plugin->maturity = MATURITY_STABLE;
