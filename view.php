@@ -78,7 +78,8 @@ $PAGE->set_activity_record($typorepo);
 
 echo $OUTPUT->header();
 
-echo '<iframe style="margin-left: 0px;" src="' . $fullurl . '" frameborder="0"
-    scrolling="' . get_config('typorepo', 'scrolling') . '"
-    width="100%"  height="' . get_config('typorepo', 'height') . '"> </iframe>';
+echo '<iframe  id="typo3_content" style="margin-left: 0px;width:100%;" src="' . $fullurl . '" frameborder="0"
+    scrolling="no"> </iframe> ';
+
+echo '<script>let iframe = document.querySelector("#typo3_content");window.addEventListener("message", function(e) {let message = e.data;iframe.style.height = message.height + "px";} , false);</script>';
 echo $OUTPUT->footer();
